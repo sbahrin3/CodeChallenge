@@ -1,0 +1,8 @@
+my/data/entity/Country.class
+my/data/entity/Persistence.class
+my/data/entity/DbProperties.class
+my/data/entity/State.class
+my/data/entity/UIDGenerator.class
+my/data/app/Test.class
+my/data/entity/District.class
+my/data/entity/Transaction.class
