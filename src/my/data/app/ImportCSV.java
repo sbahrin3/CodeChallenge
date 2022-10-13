@@ -36,15 +36,15 @@ public class ImportCSV {
 			State state = db.get("select s from State s where s.name = '" + s[1] + "'");
 			if ( state == null ) {
 				state = new State();
-				state.setName(s[0]);
+				state.setName(s[1]);
 				state.setCountry(country);
 				db.save(state);
 			}
-			District district = db.get("select d from District d where d.name = '" + s[1] + "' and d.state.id = '" + state.getId() + "'");
+			District district = db.get("select d from District d where d.name = '" + s[2] + "' and d.state.id = '" + state.getId() + "'");
 			if ( district == null ) {
 				district = new District();
 				district.setState(state);
-				district.setName(s[1]);
+				district.setName(s[2]);
 				db.save(district);
 			}
 			System.out.println(country.getName() + ", " + state.getName() + ", " + district.getName());
